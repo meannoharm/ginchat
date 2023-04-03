@@ -1,0 +1,84 @@
+info:
+  contact: {}
+paths:
+  /index:
+    get:
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      tags:
+      - Index
+  /user/createUser:
+    get:
+      parameters:
+      - description: name
+        in: query
+        name: name
+        type: string
+      - description: password
+        in: query
+        name: password
+        type: string
+      - description: rePassword
+        in: query
+        name: rePassword
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: Create User
+      tags:
+      - User
+  /user/deleteUser:
+    get:
+      parameters:
+      - description: id
+        in: query
+        name: name
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: Delete User
+      tags:
+      - User
+  /user/getUserList:
+    get:
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: Get User List
+      tags:
+      - User
+  /user/updateUser:
+    post:
+      parameters:
+      - description: id
+        in: formData
+        name: id
+        type: string
+      - description: name
+        in: formData
+        name: name
+        type: string
+      - description: password
+        in: formData
+        name: password
+        type: string
+      responses:
+        "200":
+          description: code", "message"}
+          schema:
+            type: string
+      summary: Update User
+      tags:
+      - User
+swagger: "2.0"
